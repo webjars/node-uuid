@@ -53,7 +53,7 @@
 	"shim":{
         "node-uuid" : {
 	        "exports" : "uuid"
-        },
+        }
 	}
 }
 		</requirejs>
