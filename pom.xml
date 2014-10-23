@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>node-uuid</artifactId>
-    <version>1.4.2-SNAPSHOT</version>
+    <version>1.4.1-1-SNAPSHOT</version>
     <name>node-uuid</name>
     <description>WebJar for node-uuid</description>
     <url>http://webjars.org</url>
@@ -44,19 +44,19 @@
         <upstreamVersion>1.4.1</upstreamVersion>
         <upstream.url>https://github.com/broofa/node-uuid</upstream.url>
         <extractDir>${project.build.directory}/node-uuid-${upstreamVersion}</extractDir>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
-		<requirejs>
-{
-	"paths":{
-		"node-uuid" : "uuid"
-	},
-	"shim":{
-        "node-uuid" : {
-	        "exports" : "uuid"
-        }
-	}
-}
-		</requirejs>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
+        <requirejs>
+            {
+                "paths":{
+                    "node-uuid" : "uuid"
+                },
+                "shim":{
+                    "node-uuid" : {
+                        "exports" : "uuid"
+                    }
+                }
+            }
+        </requirejs>
     </properties>
 
     <build>
