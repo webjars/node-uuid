@@ -45,6 +45,18 @@
         <upstream.url>https://github.com/broofa/node-uuid</upstream.url>
         <extractDir>${project.build.directory}/node-uuid-${upstreamVersion}</extractDir>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
+		<requirejs>
+{
+	"paths":{
+		"node-uuid" : "uuid"
+	},
+	"shim":{
+        "node-uuid" : {
+	        "exports" : "uuid"
+        }
+	}
+}
+		</requirejs>
     </properties>
 
     <build>
